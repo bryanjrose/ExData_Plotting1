@@ -2,15 +2,15 @@
 ##Code book - bryanjrose 4/22/15
 
 The output of run_analysis.R is a table of 180 observations in 88 variables.
-Observations are a summarized average of the mean and standard deviations for each respective variable.
+Observations are a summarized average of the mean and standard deviations for each respective variable.  All measurements are in normalized units bounded between [-1,1]
 
 #####Grouped variables:
 - "TestSubject" =	 Individual Test subjects who perfomed the activities (numbered 1-30)
 - "ActivityName" =  Nature of activity ocurring during measurment (Laying, sitting, standing, walking, walking upstairs, walking downstairs)
 
 #####Individual variable naming conventions:
-- t = time domain measurement
-- f = frequency domain measurement
+- t = time domain measurement (captured at constant 50 Hz)
+- f = frequency domain measurement (fast fourier transform of t domain)
 - Body = body motion component 
 - Gravity = gravitational motion component 
 - angle = angular velocity
@@ -18,7 +18,7 @@ Observations are a summarized average of the mean and standard deviations for ea
 - Gyro = measurement of gyroscope output
 - Jerk = jerk measurement (first derivative of acceleration)
 - X, Y, Z = respective direction component of measurement
-- Mag = magnitude of all direction components combined
+- Mag = magnitude of all direction components combined (calcuated using Euclidian norm)
 - mean = mean
 - std = standard deviation
 
